@@ -124,8 +124,7 @@ const Navbar = () => {
 
         {/* darkMode and loginButton */}
         <div className="hidden md:flex items-center justify-center gap-2">
-          <div className="flex items-center justify-center gap-1">
-            <p>Dark Mode</p>
+          <div className="flex items-center justify-center">
             <ToggleTheme />
           </div>
           <div>
