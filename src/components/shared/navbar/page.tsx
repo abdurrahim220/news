@@ -9,10 +9,11 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Switch } from "@/components/ui/switch";
+
 import { Button } from "@/components/ui/button";
 import MobileMenu from "@/components/features/MobileMenu";
 import { usePathname } from "next/navigation";
+import { ToggleTheme } from "@/components/features/ToogleTheme";
 
 const Navbar = () => {
   const [top, setTop] = useState<boolean>(true);
@@ -123,7 +124,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-center gap-2">
           <div className="flex items-center justify-center gap-1">
             <p>Dark Mode</p>
-            <Switch />
+            <ToggleTheme />
           </div>
           <div>
             {user === false ? <Button>Login</Button> : <Button>Logout</Button>}
