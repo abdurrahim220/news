@@ -40,10 +40,12 @@ const Navbar = () => {
   return (
     <header
       className={`fixed w-full z-30 py-4 md:bg-opacity-90 transition-colors duration-300 ease-in-out border ${
-        !top ? "bg-white backdrop-blur-md shadow-lg" : ""
+        !top
+          ? "bg-white backdrop-blur-md shadow-lg dark:text-black"
+          : "dark:text-white"
       }`}
     >
-      <nav className="flex mx-auto max-w-7xl justify-between items-center px-4 sm:px-6 xl:px-0">
+      <nav className="flex mx-auto  max-w-7xl justify-between items-center px-4 sm:px-6 xl:px-0">
         {/* logo */}
         <div>
           <Link href={"/"}>Daily News</Link>

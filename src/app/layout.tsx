@@ -37,7 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <div className="flex flex-col mx-auto max-w-7xl min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip px-4 sm:px-6 xl:px-0 ">
+          <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
             {children}
           </div>
         </ThemeProvider>

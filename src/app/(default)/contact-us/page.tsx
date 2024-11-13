@@ -7,4 +7,3 @@ const ContactUs = () => {
 export default ContactUs;
 
 
-https://news-api-next-js-kappa.vercel.app/api/news
