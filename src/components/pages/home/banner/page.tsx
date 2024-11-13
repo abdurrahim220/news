@@ -17,9 +17,10 @@ const Banner = () => {
               <Image
                 src={slider.image}
                 alt={slider.title}
-                layout="fill"
-                objectFit="cover"
-                className="w-full h-full"
+                fill
+                className="w-full h-full object-cover"
+                // priority
+                loading="lazy"
               />
             </div>
           </div>

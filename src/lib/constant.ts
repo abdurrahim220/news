@@ -22,3 +22,6 @@ export const sliders: Slider[] = [
       title: "Banner 4",
     },
   ];
+
+
+  

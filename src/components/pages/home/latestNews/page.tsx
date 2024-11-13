@@ -11,17 +11,22 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
-import { PaginationSection } from "@/components/features/Pagination";
 
-export default async function News() {
+export default async function LatestNews() {
   const response = await fetch(
     `https://news-api-next-js-kappa.vercel.app/api/news`
   );
   const news = await response.json();
   return (
-    <section className="mt-20">
+    <section className="mt-10">
+      <div className="my-4 flex items-center justify-between">
+        <h2 className="text-2xl font-bold">Latest News</h2>
+        <Link href={"/news"}>
+          <Button>See All News</Button>
+        </Link>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {news?.map((newsItem: NewsProps) => (
+        {news.slice(0, 4).map((newsItem: NewsProps) => (
           <Card key={newsItem._id}>
             <CardHeader>
               <Image
@@ -45,9 +50,6 @@ export default async function News() {
             </CardFooter>
           </Card>
         ))}
-      </div>
-      <div className="mt-6 mb-2 flex items-center justify-center">
-        <PaginationSection />
       </div>
     </section>
   );
